@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello!</h1>
+<form data-th-action="@{/submit}" method="post">
+    <button type="submit">Get csrf</button>
+    <input data-th-name="${_csrf.parameterName}"
+           data-th-value="${_csrf.token}"
+           type="hidden">
+</form>
+</body>
+</html>
